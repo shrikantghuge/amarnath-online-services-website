@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd ">
+
+	<context:component-scan base-package="in.aos.service" />	
+	 <context:annotation-config/>
+	 
+	<!-- <bean id="dbPoolDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+	   <property name="url" value="jdbc:mysql://162.222.226.38:3306/bhavaae3_bpsprd" />
+	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	   <property name="username" value="bhavaae3_shri" />
+	   <property name="password" value="India$360" />
+	   <property name="removeAbandoned" value="true"/>
+	   <property name="initialSize" value="2" />
+	   <property name="maxActive" value="10" />
+	</bean> -->
+	<!-- <bean id="dbPoolDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+	   <property name="url" value="jdbc:mysql://localhost:3306/bps_school" />
+	   <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	   <property name="username" value="root" />
+	   <property name="password" value="root" />
+	   <property name="removeAbandoned" value="true"/>
+	   <property name="initialSize" value="2" />
+	   <property name="maxActive" value="10" />
+	</bean> -->
+	
+	<bean id="MainUIDaoBean" class="in.aos.dao.MainUIDaoImpl">
+<!-- 	    <property name="dataSource" ref="dbPoolDataSource"/> -->
+	 </bean>
+
+
+</beans>
